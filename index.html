@@ -3,43 +3,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="script.js"> </script>
     </head>
-
     <body ng-app="app">
-
         <div>
-
             <div class="wrapper" ng-controller="appCtrl">
-
                 <div>
                     <button ng-click="addRow()">Add row</button>
                 </div>
 
-                <div ng-repeat="item in items">
-                        
+                <div ng-repeat="item in items">          
                     <select ng-model="items[$index].sign"  ng-blur="sum()">
                         <option value="+">+</option>
                         <option value="-">-</option>
-                    </select>
-                        
+                    </select> 
                     <input type="number" ng-model="items[$index].number" ng-blur="sum()"/>
-
-                    <button ng-click="removeRow($index)">Delete</button> 
-                        
+                    <button ng-click="removeRow($index)">Delete</button>                        
                     <button ng-click="disableRow($index)">{{buttons[$index]}}</button>
                 </div>
-
                 <div>
                     Result: {{result}}
                 </div>
-
             </div>
-
         </div>
-
-
     </body>
-
-
-
-
 </html>
