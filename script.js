@@ -43,7 +43,6 @@ app.controller('appCtrl',function($scope)
         else
         $scope.buttons[index] = "Enable";
         
-
         $scope.sum(); //ricalcolo la somma
     }
 
@@ -56,9 +55,7 @@ app.controller('appCtrl',function($scope)
             if($scope.items[i].sign=='+' && $scope.buttons[i]=="Disable")
             $scope.result+=$scope.items[i].number;
             else if($scope.items[i].sign=='-' && $scope.buttons[i]=="Disable")
-            $scope.result-=$scope.items[i].number;
-            
+            $scope.result-=$scope.items[i].number;           
         }
-    }
-        
+    }        
 });
